@@ -6,7 +6,7 @@ To run the Blog WEB Application locally you should foolow the steps indicated be
 
 1. Clone this repository.
 ```bash
-git clone [repository link]
+git clone https://github.com/00017286/blog.git
 ```
 
 2. Install dependencies
@@ -25,4 +25,4 @@ node app
 - pug.js
 
 ### WEB Application public repository on Github
-[link to github]
+[link to github repository](https://github.com/00017286/blog.git)
