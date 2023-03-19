@@ -1,0 +1,108 @@
+:root {
+    font-size: 20px;
+    color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px dashed cadetblue;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color:blueviolet
+}
+
+.nav a {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+/* homepage styles */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.intro-msg {
+    padding: 50px 0;
+    max-width: 70%;
+}
+
+.featured {
+    display: inline-block;
+    padding: 15px 30px;
+    background: cadetblue;
+    color: chartreuse;
+}
+
+/* create page styles */
+
+.form {
+max-width: 80%;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    font-family: inherit;
+    border: 1px solid cadetblue;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: cadetblue;
+    color: chartreuse;
+    font-size: 1.5rem;
+    border: none;
+    padding: 15px 30px;
+    font-family: inherit;
+}
+
+/* post page styles */
+
+.post-wrapper {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid cadetblue;
+}
+
+.post {
+    font-family: inherit;
+}
+
+.delete {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: cadetblue;
+    color: chartreuse;
+}
+
+.error {
+    display: inline-block;
+    padding: 15px;
+    border: 3px solid red;
+}

@@ -1,0 +1,18 @@
+extends layout.pug 
+
+block content 
+    div.container 
+        h1 Create post 
+
+        if error
+            p.error No text is provided! Fill in title and record textboxes!
+        if success 
+            p.success Post was successfully created!
+
+        form.form(action = "/create" method = 'POST')
+            label Title 
+            input.input(type = "text" name = "title")
+            label Record
+            textarea.input(type = "text" name = "record")
+
+            button.btn Create
