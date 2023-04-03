@@ -2,9 +2,13 @@ extends layout.pug
 
 block content
     div.container
-        h1 All Posts 
+        h1.heading All Posts 
+        h3.change Alert! Do not update/delete your posts unless you are sure! After clicking Update/Delete button the previous title and record will be premanently deleted.
 
         each post in posts 
             div.post-wrapper
-                a.post(href = `/posts/${ posts.id }`) #{ post.title }
-                a.delete(href = '#') delete
+                a.post(href = `/posts/${ post.id }`) #{ post.title }
+                div.manage
+                    a.update(href= `/posts/${ post.id }/update`) update
+                    a.archive(href= `/posts/${ post.id }/archive`) archive
+                    a.delete(href= `/posts/${ post.id }/delete`) delete

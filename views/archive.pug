@@ -1,0 +1,11 @@
+extends layout.pug 
+
+block content
+    div.container
+        h1.heading Archived posts
+
+        each post in posts 
+            div.archived-post-wrapper
+                a.post(href= `/posts/${ post.id }`) #{ post.title }
+                div.manage
+                    a.unarchive(href= `/posts/${ post.id }/unarchive`) unarchive

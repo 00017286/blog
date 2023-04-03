@@ -1,0 +1,22 @@
+extends layout.pug 
+
+block content 
+    div.container 
+        h1.heading Update post
+
+        form.form(action= "/update" method = 'POST')
+            label Title
+            input.input(type = "text" id = "title" name = "title")
+            label Record
+            textarea.input(type = "text" id = "record" name = "record")
+
+            button.btn Update
+
+        if error1
+            p.error No text is provided! Fill in title and record textboxes!
+        if error2
+            p.error No TITLE is provided! Fill in the textbox!
+        if error3
+            p.error No RECORD is provided! Fill in the textbox!
+        if success 
+            p.success Post was successfully updated!

@@ -1,18 +1,26 @@
 extends layout.pug 
 
-block content 
+block content
     div.container 
-        h1 Create post 
-
-        if error
-            p.error No text is provided! Fill in title and record textboxes!
-        if success 
-            p.success Post was successfully created!
+        h1.heading Create post 
 
         form.form(action = "/create" method = 'POST')
             label Title 
-            input.input(type = "text" name = "title")
+            input.input(type = "text" id = "title" name = "title" placeholder = "A perfect name?.." autofocus)
             label Record
-            textarea.input(type = "text" name = "record")
+            textarea.input(type = "text" id = "record" name = "record" placeholder = "Write your clever thoughts here...\nHint: You can change the size of the textarea ;)")
 
             button.btn Create
+
+        if error1
+            p.error No text is provided! Fill in title and record textboxes!
+        if error2
+            p.error No TITLE is provided! Fill in the textbox!
+        if error3
+            p.error No RECORD is provided! Fill in the textbox!
+        if success 
+            p.success Post was successfully created!
+        if error_duplicate_title
+            p.error_dpl The post with such TITLE already exists! Change something!
+        if error_duplicate_record 
+            p.error_dpl The post with such RECORD already exists! Change something!

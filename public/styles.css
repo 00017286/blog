@@ -1,7 +1,26 @@
 :root {
-    font-size: 20px;
+    font-size: 15px;
     color: cadetblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 30px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1f000000;
+    box-shadow: inset 0 0 5px rgb(60, 101, 102);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(95, 158, 160);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(60, 101, 102);
 }
 
 * {
@@ -10,14 +29,27 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(./images/wallpaper1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     max-width: 1000px;
     margin: 0 auto;
-    border-bottom: 1px dashed cadetblue;
+    border-bottom: 1px solid cadetblue;
     padding: 15px;
+}
+
+h4 {
+    display: flex;
+    padding-top: 20%;
+    width: 100%;
 }
 
 a {
@@ -26,7 +58,7 @@ a {
 }
 
 a:hover {
-    color:blueviolet
+    color:rgb(0, 0, 0)
 }
 
 .nav a {
@@ -39,70 +71,136 @@ a:hover {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 10px;
 }
 
 .intro-msg {
     padding: 50px 0;
     max-width: 70%;
+    font-size: 30px;
 }
 
-.featured {
+.heading {
+    padding: 20px 0;
+    max-width: 70%;
+}
+
+.create_btn {
     display: inline-block;
     padding: 15px 30px;
     background: cadetblue;
-    color: chartreuse;
+    color: rgb(255, 255, 255);
 }
 
 /* create page styles */
 
 .form {
-max-width: 80%;
+    max-width: 80%;
 }
 
 .input {
     width: 100%;
     display: block;
-    padding: 15px;
+    padding: 10px;
     font-family: inherit;
     border: 1px solid cadetblue;
     margin-bottom: 20px;
 }
 
+input[name=title] {
+    width: 20%;
+    transition: width 1.5s ease-in-out;
+}
+input[name=title]:focus {
+    width: 50%;
+}
+
 .btn {
     display: inline-block;
     background: cadetblue;
-    color: chartreuse;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     border: none;
     padding: 15px 30px;
     font-family: inherit;
 }
 
-/* post page styles */
-
-.post-wrapper {
-    max-width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid cadetblue;
-}
-
-.post {
-    font-family: inherit;
-}
-
-.delete {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: cadetblue;
-    color: chartreuse;
+.btn:hover {
+    cursor: pointer;
 }
 
 .error {
     display: inline-block;
+    margin-top: 20px;
     padding: 15px;
-    border: 3px solid red;
+    color: rgb(203, 0, 0);
+    border: 3px solid rgb(203, 0, 0);
+}
+
+.error_dpl {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px;
+    color: rgb(0, 24, 203);
+    border: 3px solid rgb(0, 24, 203);
+}
+
+.success {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px;
+    color: rgb(122, 203, 0);
+    border: 3px solid rgb(122, 203, 0);
+}
+
+/* posts page styles */
+
+.post-wrapper {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid cadetblue;
+    margin: 5px;
+}
+
+.archived-post-wrapper {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid cadetblue;
+    margin: 10px;
+}
+
+.post {
+    font-family: inherit;
+    padding-bottom: 10px;
+}
+
+.update {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.archive {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.delete {
+    padding: 5px 10px;
+    background-color: cadetblue;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes Font {
+    0% {color: cadetblue;}
+    100% {color: red}
+}
+
+.change {
+    margin-bottom: 30px;
+    color:#fff;
+    animation: Font 3s infinite alternate;
 }
